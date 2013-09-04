@@ -343,7 +343,7 @@ def validate_subnet(s):
     """
     if isinstance(s, basestring):
         if '/' in s:
-            start, mask = s.split('/', 2)
+            start, mask = s.split('/', 1)
             return validate_ip(start) and validate_netmask(mask)
         else:
             return False
