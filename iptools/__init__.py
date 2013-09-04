@@ -407,7 +407,7 @@ class IpRangeList (object):
     :type \*args: list of str and/or tuple
     """
     def __init__(self, *args):
-        self.ips = tuple(map(IpRange, args))
+        self.ips = tuple([IpRange(arg) for arg in args])
     #end __init__
 
     def __repr__(self):
